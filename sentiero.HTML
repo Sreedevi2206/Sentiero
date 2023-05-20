@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="style.css"></script>
+    <!-- Required meta tags
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="CM Arvind Kejriwal has launched a simplified Dashboard for tracking the COVID-19 Care facilities available in Delhi">
+    <meta property="og:title" content="Delhi Government - COVID-19 Dashboard" />
+    <meta property="og:image" content="//pbs.twimg.com/profile_images/945853608389574656/REH_LpUJ_400x400.jpg">
+    <meta property="og:description" content="CM Arvind Kejriwal has launched a simplified Dashboard for tracking the COVID-19 Care facilities available in Delhi. Status of facilities in different Government and Private facilities in Delhi can be easily obtained through this dashboard"> -->
+
+    <!-- Bootstrap CSS -->
+    <!--
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha256-aAr2Zpq8MZ+YA/D6JtRD3xtrwpEz2IqOS+pWD/7XKIw=" crossorigin="anonymous" />
+
+    <title>Sentiero </title>
+    <script>
+        let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+    </script>
+    <style>
+        
+
+        #tit{
+            text-align: center;
+            font-style: bold;
+            color: blue;
+            
+        
+        }
+        #main{
+            align-content: center;
+        }
+        hr{
+        color: aqua;
+        }
+        #login{
+            border:blue 2px solid;
+            align-content: center;
+            margin-left: 30%;
+            margin-right: 40%;
+          
+        }
+        .pic{
+            display: flex;
+                        justify-content: center;
+                        height:100px;
+                        width: 100px;
+                        border-radius: 50%;
+                        text-align: center;
+                        
+
+                        
+        
+        }
+        .pic1{
+            display: flex;
+                        justify-content: center;
+                        height:100px;
+                        width: 100px;
+                        border-radius: 50%;
+                      
+                        
+        
+        }
+        .text-center{
+            text-align: center;
+        }
+        div.card-header {
+            font-size: 0.7em;
+        }
+        p.card-text {
+            font-size: 1.1em;
+        }
+        #logo{
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+        }
+        #ram{
+            font-size: 15px;
+            float :right;
+            margin-top: 10px;
+            padding: 10px;
+            padding-inline-end: 10px;
+            display:flex;
+            flex-direction: column;
+            align-content: space-between;
+        }
+        #ram1{
+            font-size: 15px;
+            float :left;
+            margin-top: 10px;
+            padding: 10px;
+            padding-inline-end: 10px;
+            display:flex;
+            flex-direction: column;
+            align-content: space-between;
+        }
+        label,h2{
+            color: blue;
+        }
+        p{
+            color: rgb(1, 10, 10);
+        }
+        form{
+            border: blue solid 1px;
+            margin-left: 30%;
+            margin-right: 40%;
+            box-sizing: content-box;
+            border-radius: 10%;
+            
+        }
+
+
+        * {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+    </style>
+   
+    </head>
+ <body>
+</div>
+<div class="container">
+  <div id='ram1'>
+      <p> Contact : 7997466206 <br>
+          Mail id : Sentierospace@gmail.com<br>
+          instagram : Sentierospace_2206 <br>
+          twitter   : Life_Sentierospace<br>
+
+      </p> 
+
+  </div>
+  <div class="text-center"> <h4> 
+      <img src="Sentiero.png" id="logo" class="img-fluid" alt="Bhumi">
+      <label >Sentiero</label> 
+      <div id='ram'>
+          <p> Address: <br>
+               Plot no :327<br>
+                 Lingampally <br>
+              BHEL <br>
+              Hyderabad<br>
+
+          </p> 
+
+      </div>
+<hr>
+  </h4>
+  </div><br><br>
+  <!-- Slideshow container -->
+<div class="slideshow-container">
+
+   
+      <img src="qq.jpg" style="width:100%">
+      
+    </div>
+  
+</div>
+            
+<br><br>
+<center>
+
+    <form name="login" >
+       
+        <center>  <span> <h2 > <b>Login</b> </h2> </center>  
+      
+        <b> Username : </b><input type="text" required name="userid" pattern=""  />
+        <br>
+        <br> 
+        <b> Password : </b><input type="password" required name="pswrd"  />
+        <br>
+        <br>
+        <input type="button" onclick="check(this.form)" value="Login"/> &#160&#160&#160&#160&#160&#160
+        <input type="reset" value="Cancel"/>
+        <img  class="pic1" src="sentiero.png" alt="img" >
+    </form>
+
+</span>
+    <script language="javascript">
+        function check(form) { 
+            
+            if(form.userid.value =="1901" &&  form.pswrd.value=="ABC@123") {
+                alert("You are Redirecting to Hospital Emergency Lane Navigation View  ...");
+                window.open('Hospital.html');
+            }
+            else if(form.userid.value =="1902" &&  form.pswrd.value=="ABCD@1234"){
+                alert("You are Redirecting to VIP Escort Lane Navigation  View ...");
+                window.open('');
+
+            }
+            else {
+                alert("Error Password or Username")
+            }
+        }
+    </script>
+</center>
+
+        </div>
+      </div>
+      <marquee style="color: red;">Enter your Details accurately  Even for different sectors a unique login..</marquee>
+
+  </body>
+</html>

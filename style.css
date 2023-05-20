@@ -1,0 +1,17 @@
+#tit{
+    text-align: center;
+    font-style: bold;
+    color: blue;
+    
+
+}
+#main{
+    align-content: center;
+}
+hr{
+color: aqua;
+}
+#login{
+    border:blue 2px solid;
+    align-content: center;
+}

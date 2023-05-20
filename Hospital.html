@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+    <head>
+<style>
+    .text-center{
+        text-align: center;
+    }
+    #logo{
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+    }
+    label{
+        color: blue;
+        height: 30px;
+
+    }
+    #s{
+        border:1px solid blueviolet;
+        align-content: center;
+        margin-left: 30%;
+        margin-right: 30%;
+
+
+    }
+    table,td,th,tr{
+        border: 1px solid blue;
+        text-align: center;
+    }
+
+    .text-center{
+        text-align: center;
+    }
+    div.card-header {
+        font-size: 0.7em;
+    }
+    p.card-text {
+        font-size: 1.1em;
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha256-aAr2Zpq8MZ+YA/D6JtRD3xtrwpEz2IqOS+pWD/7XKIw=" crossorigin="anonymous" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script>
+    var app=app.angular.module("app",[]);
+    app.controller("control",function($scope){
+        var i=15;
+        while(i<25){
+            i=i+1;
+            $scope.i=i; 
+             
+        }
+        while(i>15){
+            i=i-1;
+            $scope.i=i;
+        }
+
+    });
+</script>
+    </head>
+    <body ng-app="app" ng-controller="control">
+      <div class="text-center"> <h4> 
+                
+            <img src="Sentiero.png" id="logo" class="img-fluid" alt="Bhumi">
+                <h3 style="color: blue;">"Most heartbreaking statement when doctor says ,  “You are late !!”.
+                </h3>
+                </div>
+          <hr>
+          <br>
+          <marquee  >Current Location may varies due to change in moment of the device it would  be updated with in frequent of time intervals ..</marquee>
+
+          <center><table >
+            <th>Current Location</th><br>
+
+            <tr><td>  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3803.174426017422!2d78.43900051435601!3d17.594450201432274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8f3b0e25f6e5%3A0xfbc70ecccbea359d!2sMlrit%20Cricket%20Ground!5e0!3m2!1sen!2sin!4v1674329340776!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></td></tr>
+          </table>
+            
+                  
+          </center>
+
+<br><br>
+ 
+          <center> <h4>Nearest Emergency Health Services ...</h4>
+           <br>
+           <br>
+           <hr>
+            <h4 class="text-center"> <a href="arunframe.html" target="_self" >Arundathi Institue of medical Sciences </a> </h4></center> 
+          <div class="row text-center">
+            <div class="col">
+                <div class="card text-white bg-primary mb-3 shadow">
+                  <div class="card-header">Total ICCU Available</div>
+                  <div class="card-body">
+                    <p class="card-text" id="beds_total"> 15</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+  
+            <div class="col">
+                <div class="card text-dark bg-warning mb-3 shadow">
+                  <div class="card-header">Time Taken</div>
+                  <div class="card-body">
+                    <p class="card-text" id="beds_occupied" ng-init="i=10"><label>12</label> min</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+  
+            <div class="col">
+              
+                <div class="card text-white bg-success mb-3 shadow">
+                  <div class="card-header">Success Rate</div>
+                  <div class="card-body">
+                    <p class="card-text" id="beds_vacant">81%</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+  
+          <hr />
+
+          <!-- Nxt hospital -->
+          <h4 class="text-center"><a href="sechosp.html" target="_self">Malla Reddy  Institue of medical Sciences</a>   </h4></center> 
+          <div class="row text-center">
+            <div class="col">
+                <div class="card text-white bg-primary mb-3 shadow">
+                  <div class="card-header">Total ICCU Available</div>
+                  <div class="card-body">
+                    <p class="card-text" id="beds_total"> 25</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+  
+            <div class="col">
+                <div class="card text-dark bg-warning mb-3 shadow">
+                  <div class="card-header">Time Taken</div>
+                  <div class="card-body">
+                    <p class="card-text" id="beds_occupied" ng-init="i=10"><label>35</label> min</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+  
+            <div class="col">
+              
+                <div class="card text-white bg-success mb-3 shadow">
+                  <div class="card-header">Success Rate</div>
+                  <div class="card-body">
+                    <p class="card-text" id="beds_vacant">75%</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+  
+          <hr />
+
+          <!-- 3 -->
+          <h4 class="text-center"><a href="h5.html"   target="_self">Osmania General Hospital</a>   </h4></center> 
+          <div class="row text-center">
+            <div class="col">
+                <div class="card text-white bg-primary mb-3 shadow">
+                  <div class="card-header">Total ICCU Available</div>
+                  <div class="card-body">
+                    <p class="card-text" id="beds_total"> 30</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+  
+            <div class="col">
+                <div class="card text-dark bg-warning mb-3 shadow">
+                  <div class="card-header">Time Taken</div>
+                  <div class="card-body">
+                    <p class="card-text" id="beds_occupied" ng-init="i=10"><label>46</label> min</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+  
+            <div class="col">
+              
+                <div class="card text-white bg-success mb-3 shadow">
+                  <div class="card-header">Success Rate</div>
+                  <div class="card-body">
+                    <p class="card-text" id="beds_vacant">88%</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+  
+          <hr />
+
+          
+    </body>
+</html>
